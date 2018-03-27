@@ -6,6 +6,6 @@ a = int(input("Ingrese un numero Entero: "))
 b = int(input("Ingrese otro numero Entero: "))
 
 if a%b == 0:
-	print ("La division es exacta")
+	print "La division es exacta"
 else :
-	print ("la division no es exacta")
+	print "la division no es exacta"
