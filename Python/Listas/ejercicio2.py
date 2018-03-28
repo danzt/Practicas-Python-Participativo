@@ -1,66 +1,15 @@
-#Ingresar tuplas a un lista por consola
-lista=[]
+# -*- coding: utf-8 -*-
+#2) dada la siguiente lista [1,5,6,9,8,2,4,3,4,3] imprimir una nueva, 
+#con la suma de cada uno de los elementos de la lista con el siguiente, 
+#manteniendo el primero digito ejemplo [1,6,12,21,29...]
 
-op = 1
+lista = [1,5,6,9,8,2,4,3,4,3]
+l1 = []
+suma = 0
 
-while op > 0:
-	
-	print "Menu:"
-	print "1) Ingresar un alumno a la lista"
-	print "2) Eliminar un valor de la lista"
-	print "3) Mostrar Lista"
-	print "0) Salir"
+for val in lista:
+	suma = suma + val
+	l1.append(suma)
 
-	op = int(input("Ingrese una opcion: "))
-
-	if op == 1:
-		repetido = ""
-		a = int(input("Ingrese un valor entero: "))
-		b = input("Ingrese nombre: ")
-		c = input("Ingrese apellido: ")
-
-		val = a,b,c
-
-
-		if len(lista) > 0:
-			for x in lista:
-				if x[0] == a:
-					print "Ya existe alumno con ese valor"
-					repetido = "true"
-					break
-
-			if not repetido :
-				lista.append(val)
-				print "Agregado."
-
-		else:
-			lista.append(val)
-			print "Agregado"
-
-	elif op == 2:
-		repetido = ""
-		a = int(input("Ingrese un valor entero: "))
-
-		if len(lista) > 0:
-			for x in lista:
-				val = x
-				
-				if x[0] == a:
-					lista.remove(val)
-					repetido = "true"
-					break
-
-			if repetido :
-				print "Eliminado"
-
-		else:
-			print "Lista Vacia"
-
-	elif op == 3:
-		print "Lista Ingresada : {}".format(lista)
-
-	elif op == 0:
-		print "Programa Terminado"
-	
-	else :
-		print "Ingrese una opcion valida!!"
+print "Lista Original: {}".format(lista)
+print "Lista Nueva: {}".format(l1)
