@@ -1,9 +1,5 @@
 # 4) introducir un ano por teclado y decir a que siglo pertenece ese ano
 
-"""
--separo todo
-meto dos elemtos en una lista 
-- meto los otros dos en otra"""
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 l2=[]
