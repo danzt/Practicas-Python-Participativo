@@ -20,9 +20,13 @@ if (year>=1000):
 		print "Siglo:", l3[0]+1
 
 else:
-		year=str(year).zfill(4)
-		ly=map(int, year)
-		print "Siglo:", ly[0]+ly[1]+1
+	year=str(year).zfill(4)
+	ly=map(int, year)
+	
+	if(ly[2]==0 and ly[3]==0):
+			print "Siglo:", ly[0]+ly[1]
+	else:
+			print "Siglo:", ly[0]+ly[1]+1
 
 
 
