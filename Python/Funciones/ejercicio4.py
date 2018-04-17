@@ -25,6 +25,7 @@ def up(number):
 def down(number):
 	a = up(number)
 	for x in xrange(1,number):
+		
 		print a[::x]
 
 
