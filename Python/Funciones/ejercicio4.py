@@ -14,19 +14,22 @@ figura ejemplo:
 *"""
 
 def up(number):
-	for x in xrange(0,number/2):
-		print '*'
+	a = '*'
+	print a
+	for x in xrange(1,number):
+		a = a + '*'
+		print a
+	return a
+		
 
 def down(number):
-	up(number)
-	i = (number/2)
-
-	for x in xrange(i,number):
-		print '*'
+	a = up(number)
+	for x in xrange(1,number):
+		print a[::x]
 
 
-def index(number):
+def index():
+	number = input("Ingrese el ancho del triangulo para dibujar: ")
 	down(number)
 	
-number = input("Ingrese el ancho del triangulo para dibujar: ")
-index(number)
+index()
