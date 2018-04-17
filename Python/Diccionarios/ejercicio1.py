@@ -17,3 +17,4 @@ else:
 print "El diccionario tiene las siguientes clases {}".format(dictionary.keys())
 print "El diccionario tiene los siguientes valores {}".format(dictionary.values())
 print "Tenemos {} datos del paciente".format(len(dictionary))
+print "El diccionario es: {}".format(dictionary)
