@@ -50,6 +50,8 @@ if a >= 31:
 	if b >= 12:
 		b = 1
 		c = c + 1
+	else:
+		b = b + 1
 else:
 	a = a + 1
 
