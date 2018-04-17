@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="curso-python-para-coop-geekos">Curso Python para Coop Geekos!</h1>
+<p>Básicamente, Python es un lenguaje de programación de alto nivel, interpretado y multipropósito. En los últimos años su utilización ha ido constantemente creciendo y en la actualidad es uno de los lenguajes de programación más empleados para el desarrollo de software.</p>
+<h1 id="escibir-y-ejecutar-codigo-python">Escibir y Ejecutar Codigo Python</h1>
+<p>Se puede utilizar la shell de python para escribir y ejecutar pequeñas pruebas, para entrar a ella, solo basta con escribir en la terminal <code>python</code> , para escribir código mas extenso deben crear un archivo python <code>algo.py</code>y en el, escribir sus códigos python , para ejecutar ese archivo deben situarse desde la terminal en el directorio donde este guardado el archivo, y escribir <code>python seguido el nombre del archivo</code>, ejemplo<code>python algo.py</code>.</p>
+<h1 id="hola-mundo">Hola Mundo</h1>
+<p>comenzaremos con el típico Hola mundo</p>
+<pre><code>print "Hola Mundo"
+</code></pre>
+<p>donde <code>print</code> es la función para mostrar mensajes en pantalla seguido el mensaje <code>"Hola Mundo"</code> dentro de comillas dobles o simples para establecer que es un mensaje de tipo string lo que se va a mostrar en pantalla.</p>
+<h2 id="declaracion-de-variables-y-tipos-de-datos">Declaracion de Variables y tipos de datos</h2>
+<p>En Python tenemos como tipos de datos simples números: enteros, de coma flotante y complejos, como pueden ser 3, 15.57 o 7 + 5j; cadenas de texto, como “Hola Mundo” y valores booleanos: <code>True</code> (cierto) y <code>False</code> (falso).</p>
+<p>Vamos a crear variables a modo de ejemplo. Una de tipo cadena, una de tipo entero y una de tipo float:</p>
+<pre><code>#Esto es una cadena(string)
+x= "Curso Python"
+
+#Esto es un entero
+e= 30
+
+#Esto es un float
+f=30.6
+</code></pre>
+<p>Como puede ver en Python, a diferencia de muchos otros lenguajes, no se declara el tipo de la variable al crearla. En C++, por ejemplo, escribiríamos:</p>
+<pre><code>string x = "Curso Python";
+int e= 30;
+</code></pre>
+<p>También nos ha servido nuestro pequeño ejemplo para mostrarles los comentarios inline en Python: cadenas de texto que comienzan con el carácter ‘#’. Comentar el código siempre resulta util para que los demás entienden o tengan idea que función cumple tu código.</p>
+<h2 id="operadores-aritméticos">Operadores aritméticos</h2>
+<p>En Python también existen los operadores aritméticos que son <code>+</code>,<code>-</code>,<code>*</code>,<code>**</code>,<code>/</code>,<code>%</code>, y estos sirven para realizar cálculos matemáticos.</p>
+<pre><code>num1= 3
+num2= 5
+#SUMA
+print num1+num2
+#RESTA
+print num1-num2
+#MULTIPLICACION
+print num1*num2
+#EXPONENTE
+print num1**num2 #Esto es igual que 3^5
+#DIVISION
+print num1/num2 #Su resultado sera 0 debido al tipo de dato
+#tendria que ser de tipo Float para dar una division con decimales
+#se establece uno de los numeros a float
+print num1/float(num2)
+#MODULO
+print num1%num2 # retorna el residuo en la division
+</code></pre>
+<h2 id="operadores-relacionales">Operadores Relacionales</h2>
+<p>Se utilizan para evaluar condicionales; como respuesta obtendremos booleanos.<br>
+<img src="https://lh3.googleusercontent.com/GiCSVrl_a4YZvZt2hEJjLSc5b2rfyTqPpH43-g4laMxtaBUtkVCaaLBhZ9Nl4KcJ37Y3hnjhpUnb" alt="enter image description here"></p>
+<h2 id="operadores-lógicos">Operadores Lógicos</h2>
+<p>Permite construir expresiones lógicas, se obtiene como resultado <strong>booleanos</strong>.<br>
+<img src="https://lh3.googleusercontent.com/PD4UL3lVlbxQkeIiIZq5jk0W-NDq-4lO-fGGrKwLkevJm0Pl5-cMq1MOxSEM_v284rvOLLItD0ng" alt="enter image description here"></p>
+<h2 id="sentencias-condicionales">Sentencias Condicionales</h2>
+<p>En python existen las condicionales <code>if (si)</code>,<code>elif(si,"si el primer if no se cumple")</code>y<code>else(si ninguna se cumple)</code>, veamoslo con un ejemplo:</p>
+<pre><code>mayoria_edad=18
+mi_edad=20
+
+if mi_edad &gt;= mayoria_edad:
+    print "Soy mayor de edad"
+else:
+	print "Soy menor de edad"
+	
+#Si la primera condicion se cumple se ejecuta la linea de abajo
+#Es importante que la linea de abajo este indexada porque si no dara error de indectacion y no se ejecutara.
+#Si la primera condicion no se cumple se ejecutara el else y lo que este dentro de el.
+#Ademas cada condicion debe terminar con un :
+</code></pre>
+<p>Otro ejemplo…</p>
+<pre><code>sexo='m'
+if sexo== 'm':
+	print "Eres Hombre"
+elif sexo == 'f':
+	print "Eres Mujer"
+else:
+	print "Eres Otro"
+#Si se cumple la primera condicion imprime eres hombre
+#si no, pasa a la segunda condicion y si se cumple se ejecuta
+#si no se cumple ninguna de las anteriores se ejecuta el else
+</code></pre>
+<hr>
+<h2 id="aqui-ira-arreglos-y-siclos-repetitivos">aqui ira arreglos y siclos repetitivos</h2>
+<h2 id="tuplas">Tuplas</h2>
+<p>Una tupla es una lista inmutable. Una tupla no puede modificarse de ningún modo después de su creación.</p>
+<p>Una tupla se define del mismo modo que una lista, salvo que el conjunto se encierra entre paréntesis en lugar de entre corchetes.</p>
+<pre><code>#Esto es una tupla
+tupla=('hola',3,'cafe')
+</code></pre>
+<p>Los elementos de una tupla tienen un orden definido, como los de una lista. Las tuplas tienen primer índice 0, como las listas, de modo que el primer elemento de una tupla no vacía es siempre  tupla[0],</p>
+<ul>
+<li>El primer elemento de  <code>('hola', 3, 'cafe')</code>  es <code>'hola'</code>.</li>
+<li>El segundo elemento de  <code>('hola', 3, 'cafe')</code>  es <code>3</code>.</li>
+<li>El tercer elemento de  <code>('hola', 3, 'cafe')</code>  es <code>'cafe'</code>.</li>
+</ul>
+<p>Los índices negativos cuentan desde el final de la tupla, como en las listas.</p>
+<pre><code>tupla[-1]
+'cafe'
+</code></pre>
+<p>A las tuplas también se les puede aplicar la función <code>len()</code> para calcular su longitud. El valor de esta función aplicada a una tupla nos indica cuántas componentes tiene esa tupla.</p>
+<pre><code>len(tupla)
+3
+</code></pre>
+<p>Una  tupla unitaria  es una tupla con una componente. Para distinguir la tupla unitaria de la componente que contiene, Python exige que a la componente no sólo se la encierre entre paréntesis sino que se le ponga una coma a continuación del valor de la componente (así  <code>(1810)</code>  es un número, pero  <code>(1810,)</code>es la tupla unitaria cuya única componente vale  <code>1810</code>).</p>
+<pre><code>u=(1810)
+len(u)
+Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: object of type 'int' has no len()
+ 
+u=(1810,)
+len(u)
+1
+u[0]
+1810
+</code></pre>
+<p>No pueden añadirse elementos a una tupla. Las tuplas no tienen los métodos  append  ni  extend.</p>
+<p>No pueden eliminarse elementos de una tupla. Las tuplas no tienen los métodos  remove  ni  pop.</p>
+<p>No pueden buscarse elementos en una tupla. Las tuplas no tienen el método  index.</p>
+<p>Se puede, no obstante, usar  in  para ver si un elemento existe en la tupla.</p>
+<pre><code>busqueda= 3 in tupla
+print busqueda
+True
+</code></pre>
+<p>Ejercicios</p>
+<pre><code>1)Pedir 5 datos por teclado,guardarlos en una tupla e imprimirla.
+2)Crea una tupla con valores ya predefinidos del 1 al 10, pide un índice por teclado y muestra los valores de la tupla en cuyo indice.
+3)ingresar una fecha por teclado que cumpla con este formato(Día, Mes, Año) (donde Día, Mes y Año son números enteros) calcule el día siguiente al dado, en el mismo formato e imprimir ambas tuplas 'fecha ingresada' y 'fecha del dia siguiente'!
+4)ingresar una fecha por teclado que cumpla con este formato(Día, Mes, Año) (donde Día y Año son números enteros y Mes es un string 'enero','febrero'...) calcule el día siguiente al dado, en el mismo formato e imprimir ambas tuplas 'fecha ingresada' y 'fecha del dia siguiente'.
+</code></pre>
+<h2 id="diccionarios">Diccionarios</h2>
+<p>Un Diccionario es una estructura de datos y un tipo de dato en Python con características especiales que nos permite almacenar cualquier tipo de valor como enteros, cadenas, listas e incluso otras funciones. Estos diccionarios nos permiten además identificar cada elemento por una clave (Key).<br>
+<img src="https://1.bp.blogspot.com/-p1pqpAt1898/WEiJ5MGpnNI/AAAAAAAAGdg/bT2cw7B_hj00q0cs9C7PQZ2opT4NYJgKACLcB/s1600/dictionary%2Bimage.png" alt=""></p>
+<ol>
+<li>
+<p>Para definir un diccionario, se encierra el listado de valores entre llaves. Las parejas de clave y valor se separan con comas, y la clave y el valor se separan con dos puntos.</p>
+<pre class=" language-python"><code class="prism  language-python">diccionario <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'nombre'</span> <span class="token punctuation">:</span> <span class="token string">'Carlos'</span><span class="token punctuation">,</span> <span class="token string">'edad'</span> <span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token string">'cursos'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'Python'</span><span class="token punctuation">,</span><span class="token string">'Django'</span><span class="token punctuation">,</span><span class="token string">'JavaScript'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>Podemos acceder al elemento de un Diccionario mediante la clave de este elemento, como veremos a continuación:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'nombre'</span><span class="token punctuation">]</span> <span class="token comment">#Carlos</span>
+<span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'edad'</span><span class="token punctuation">]</span><span class="token comment">#22</span>
+<span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'cursos'</span><span class="token punctuation">]</span> <span class="token comment">#['Python','Django','JavaScript']</span>
+
+</code></pre>
+</li>
+<li>
+<p>También es posible insertar una lista dentro de un diccionario. Para acceder a cada uno de los cursos usamos los índices:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'cursos'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token comment">#Python</span>
+<span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'cursos'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token comment">#Django</span>
+<span class="token keyword">print</span> diccionario<span class="token punctuation">[</span><span class="token string">'cursos'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token comment">#JavaScript</span>
+
+</code></pre>
+</li>
+<li>
+<p>Para recorrer todo el Diccionario, podemos hacer uso de la estructura for:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> key <span class="token keyword">in</span> diccionario<span class="token punctuation">:</span>
+  <span class="token keyword">print</span> key<span class="token punctuation">,</span> <span class="token string">":"</span><span class="token punctuation">,</span> diccionario<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+
+</code></pre>
+</li>
+</ol>
+<h2 id="métodos-de-los-diccionarios">Métodos de los Diccionarios</h2>
+<ul>
+<li>
+<p>dict ()</p>
+<p>Recibe como parámetro una representación de un diccionario y si es factible, devuelve un diccionario de datos.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span>  <span class="token builtin">dict</span><span class="token punctuation">(</span>nombre<span class="token operator">=</span><span class="token string">'nestor'</span><span class="token punctuation">,</span> apellido<span class="token operator">=</span><span class="token string">'Plasencia'</span><span class="token punctuation">,</span> edad<span class="token operator">=</span><span class="token number">22</span><span class="token punctuation">)</span>
+
+dic → <span class="token punctuation">{</span>‘nombre’ <span class="token punctuation">:</span> <span class="token string">'nestor'</span><span class="token punctuation">,</span> ‘apellido’ <span class="token punctuation">:</span> <span class="token string">'Plasencia'</span><span class="token punctuation">,</span> ‘edad’ <span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>zip()</p>
+<p>Recibe como parámetro dos elementos iterables, ya sea una cadena, una lista o una tupla. Ambos parámetros deben tener el mismo número de elementos. Se devolverá un diccionario relacionando el elemento i-esimo de cada uno de los iterables.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token string">'abcd'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+dic →   <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>items()</p>
+<p>Devuelve una lista de tuplas, cada tupla se compone de dos elementos: el primero será la clave y el segundo, su valor.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span>   <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+items <span class="token operator">=</span> dic<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+items → <span class="token punctuation">[</span><span class="token punctuation">(</span>‘a’<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span>‘b’<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span>‘c’<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span>‘d’<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+</code></pre>
+</li>
+<li>
+<p>keys()</p>
+<p>Retorna una lista de elementos, los cuales serán las claves de nuestro diccionario.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span>  <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+keys<span class="token operator">=</span> dic<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+keys→ <span class="token punctuation">[</span>‘a’<span class="token punctuation">,</span>’b’<span class="token punctuation">,</span>’c’<span class="token punctuation">,</span>’d’<span class="token punctuation">]</span> 
+
+</code></pre>
+</li>
+<li>
+<p>values()</p>
+<p>Retorna una lista de elementos, que serán los valores de nuestro diccionario.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span>  <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+values<span class="token operator">=</span> dic<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+values→ <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span> 
+
+</code></pre>
+</li>
+<li>
+<p>clear()</p>
+<p>Elimina todos los ítems del diccionario dejándolo vacío.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token number">1</span> <span class="token operator">=</span>  <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+dic1<span class="token punctuation">.</span>clean<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+dic1 → <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>copy()</p>
+<p>Retorna una copia del diccionario original.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+dic1 <span class="token operator">=</span> dic<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+dic1 → <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>fromkeys()</p>
+<p>Recibe como parámetros un iterable y un valor, devolviendo un diccionario que contiene como claves los elementos del iterable con el mismo valor ingresado. Si el valor no es ingresado, devolverá none para todas las claves.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+dic →  <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>get()</p>
+<p>Recibe como parámetro una clave, devuelve el valor de la clave. Si no lo encuentra, devuelve un objeto none.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+valor <span class="token operator">=</span> dic<span class="token punctuation">.</span>get<span class="token punctuation">(</span>‘b’<span class="token punctuation">)</span> 
+
+valor → <span class="token number">2</span>
+
+</code></pre>
+</li>
+<li>
+<p>pop()</p>
+<p>Recibe como parámetro una clave, elimina esta y devuelve su valor. Si no lo encuentra, devuelve error.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+valor <span class="token operator">=</span> dic<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>‘b’<span class="token punctuation">)</span> 
+
+valor → <span class="token number">2</span>
+dic → <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>setdefault()</p>
+<p>Funciona de dos formas. En la primera como get</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+valor <span class="token operator">=</span> dic<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span>‘a’<span class="token punctuation">)</span>
+
+valor → <span class="token number">1</span>
+
+</code></pre>
+<p>Y en la segunda forma, nos sirve para agregar un nuevo elemento a nuestro diccionario.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+valor <span class="token operator">=</span> dic<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span>‘e’<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+dic → <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span> <span class="token punctuation">,</span> ‘e’ <span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span>
+
+</code></pre>
+</li>
+<li>
+<p>update()</p>
+<p>Recibe como parámetro otro diccionario. Si se tienen claves iguales, actualiza el valor de la clave repetida; si no hay claves iguales, este par clave-valor es agregado al diccionario.</p>
+<pre class=" language-python"><code class="prism  language-python">dic <span class="token number">1</span> <span class="token operator">=</span> <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+dic <span class="token number">2</span> <span class="token operator">=</span> <span class="token punctuation">{</span>‘c’ <span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> ‘e’ <span class="token punctuation">:</span> <span class="token number">9</span> <span class="token punctuation">,</span> ‘f’ <span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">}</span>
+dic1<span class="token punctuation">.</span>update<span class="token punctuation">(</span>dic <span class="token number">2</span><span class="token punctuation">)</span>
+
+dic <span class="token number">1</span> → <span class="token punctuation">{</span>‘a’ <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> ’b’ <span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> ‘c’ <span class="token punctuation">:</span> <span class="token number">6</span> <span class="token punctuation">,</span> ‘d’ <span class="token punctuation">:</span> <span class="token number">4</span> <span class="token punctuation">,</span> ‘e’ <span class="token punctuation">:</span> <span class="token number">9</span> <span class="token punctuation">,</span> ‘f’ <span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<p>Ejercicios</p>
+<pre><code>1)Crea un diccionario vacío para guardar los datos de un paciente y, posteriormente, guarda en él su edad (40), sexo (‘M’) y si es diabético (_True_). Una vez añadidos los datos, ¿cuáles serán las claves y los valores del diccionario? ¿Cuántos datos tenemos sobre este paciente?, imprimir diccionario.
+2)introducir por teclado una cadena y devuelva un diccionario con la cantidad de apariciones de cada palabra en la cadena. Por ejemplo, si recibe  _"que lindo día que hace hoy"_  debe devolver:  `'que': 2, 'lindo': 1, 'día': 1, 'hace': 1, 'hoy': 1`.
+3)Crea un diccionario(tipo agenda telefonica) donde la clave sea el nombre del contacto y el valor sea el teléfono. Tendrás que ir pidiendo ingresar nuevos contactos hasta que el usuario diga que no quiere insertar mas. No se podrán meter nombres repetidos, imprimir el diccionario.
+4)introducir por teclado 3 palabras y devolver un diccionario donde la key sea la palabra ingresada, y el valor sea la cantidad de caracteres que posee dicha palabra, ejemplo {'abogado':7}
+</code></pre>
+<h2 id="funciones">Funciones</h2>
+<p>En Python, la definición de funciones se realiza mediante la instrucción  <code>def</code>  más un nombre de función descriptivo, seguido de paréntesis de apertura y cierre. Como toda estructura de control en Python, la definición de la función finaliza con dos puntos (<code>:</code>) y el algoritmo que la compone, irá identado con 4 espacios:</p>
+<pre><code>def mi_funcion(): 
+    #aquí el algoritmo
+</code></pre>
+<p>Una función, no es ejecutada hasta tanto no sea invocada. Para invocar una función, simplemente se la llama por su nombre:</p>
+<pre><code>def mi_funcion(): 
+    print "Hola Mundo" 
+mi_funcion()
+</code></pre>
+<p>Cuando una función, haga un  <strong>retorno de datos</strong>, éstos, pueden ser asignados a una variable:</p>
+<pre><code>def funcion(): 
+    return "Hola Mundo" 
+ 
+frase = funcion() 
+print frase
+</code></pre>
+<h3 id="parámetros">Parámetros</h3>
+<p>Un parámetro es un valor que la función espera recibir cuando sea llamada (invocada), a fin de ejecutar acciones en base al mismo. Una función puede esperar uno o más parámetros (que irán separados por una coma) o ninguno.</p>
+<pre><code>def mi_funcion(nombre, apellido): 
+    #algoritmo
+</code></pre>
+<p>Los parámetros, se indican entre los paréntesis, a modo de variables, a fin de poder utilizarlos como tales, dentro de la misma función.</p>
+<p>Los parámetros que una función espera, serán utilizados por ésta, dentro de su algoritmo, a modo de  <strong>variables de ámbito local</strong>. Es decir, que los parámetros serán variables locales, a las cuáles solo la función podrá acceder:</p>
+<pre><code>def mi_funcion(nombre, apellido): 
+    nombre_completo = nombre, apellido 
+    print nombre_completo
+    
+mi_funcion('miguel','ochoa')
+</code></pre>
+<p>Al llamar a una función,  <strong>siempre se le deben pasar sus argumentos en el mismo orden en el que los espera</strong>.</p>
+<h4 id="parámetros-por-omisión">Parámetros por omisión</h4>
+<p>En Python, también es posible, asignar valores por defecto a los parámetros de las funciones. Esto significa, que la función podrá ser llamada con menos argumentos de los que espera:</p>
+<pre><code>def saludar(nombre, mensaje='Hola'): 
+    print mensaje, nombre 
+ 
+saludar('Pepe Grillo') # Imprime: Hola Pepe Grillo
+</code></pre>
+<p>Al asignar parámetros por omisión, no debe dejarse espacios en blanco ni antes ni después del signo  <code>=</code>.</p>
+<h4 id="llamar-una-función-dentro-de-otra-función">Llamar una función dentro de otra función</h4>
+<pre><code>def primera_suma(a,b):
+	return a+b
+
+def segunda_suma(c):
+	suma2=primera_suma(6,8)+c
+	print suma2
+
+segunda_suma(5)
+</code></pre>
+<p>En el Ejemplo observamos como en la primera funcion se realiza la suma de a+b mientras que en la segunda funcion se suma el resultado de (a+b) que esta en la primera funcion + c.</p>
+<p>Ejercicios</p>
+<pre><code>1)Definir una función es_palindromo() que reconoce palíndromos (es decir, palabras que tienen el mismo aspecto escritas invertidas), ejemplo: es_palindromo ("radar") tendría que devolver True.
+2)Definir una función que calcule la longitud de una lista o una cadena dada. (Es cierto que python tiene la función len() incorporada, pero escribirla por nosotros mismos resulta un muy buen ejercicio.
+3)Definir una función generar_n_caracteres() que tome un entero n y devuelva el caracter multiplicado por n. Por ejemplo: generar_n_caracteres(5, "x") debería devolver "xxxxx".
+4)Ingresar el ancho de un triangulo y apartir del ancho se dibuje el triangulo con (*), hacerlo con funciones, una funcion que rellene la parte de arriba y otra la parte de abajo, ademas, hacer una funcion index para recibir los datos por teclado y llamar a las demas funciones dentro de ella.
+figura ejemplo:
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+</code></pre>
+</div>
+</body>
+
+</html>
