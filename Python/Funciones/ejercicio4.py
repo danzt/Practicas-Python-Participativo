@@ -21,13 +21,11 @@ def up(number):
 		print a
 	return a
 		
-
 def down(number):
 	a = up(number)
 	for x in xrange(1,number):
-		
-		print a[::x]
-
+		a = a[1::1]
+		print a
 
 def index():
 	number = input("Ingrese el ancho del triangulo para dibujar: ")
