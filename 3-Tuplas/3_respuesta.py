@@ -27,6 +27,15 @@ else:
 fecha=(dia, mes, ano)
 print "\nFecha ingresada = ", fecha
 
-fecha_siguiente= (dia+1, mes, ano)
-print "Fecha siguiente = ", fecha_siguiente
+if (dia==31) and (mes==12):
+	fecha_siguiente= (1, 1, ano+1)
+	print "Fecha siguiente = ", fecha_siguiente
+
+elif (dia==31) and (mes!=12):
+	fecha_siguiente= (1, mes+1, ano)
+	print "Fecha siguiente = ", fecha_siguiente
+
+else:
+	fecha_siguiente= (dia+1, mes, ano)
+	print "Fecha siguiente = ", fecha_siguiente
 
