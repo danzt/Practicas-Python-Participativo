@@ -10,6 +10,8 @@
 #!/usr/bin/python
 
 lista=[]
+agenda_contacto={}
+agenda_persona={}
 class Agenda(object):
 	def __init__(self):
 		self.nombre = None
@@ -22,29 +24,42 @@ class Agenda(object):
 			lista = [self.telefono, self.email]
 			self.agenda = {self.nombre: lista}
 			print "\nContacto agregado!\n"
-		else:
-			print "\nYa existe\n"
-			
-	def Listar(self):
-		print 'Listado:'
-		print self.agenda
+			return self.agenda
+		else:					
+			print "\nYa existe\n"	
+		
+	def Agendar(self, agenda_de_persona):
+		agenda_contacto.update(agenda_de_persona)
+		return agenda_contacto
+
+	def Listar(self, agenda_de_contactos):
+		print '\nListado:\n'
+		print agenda_de_contactos
 		
 	def Buscar(self, nombre):
-		print self.agenda.get(self.nombre)
-		print '\n'
+		if self.nombre in self.agenda.keys():
+			print self.agenda.get(self.nombre)
+			print '\n'
+		else:
+			print '\nContacto no encontrado!!!\n'
 
 	def Editar(self, nombre):
 		if self.nombre in self.agenda.keys():
+			del(agenda_contacto[nombre])
 			lista = [self.telefono, self.email]
 			self.agenda = {self.nombre: lista}
-			print '\nContacto anterior: ', self.agenda.get(self.nombre)
-			print '\nContacto modificado!', self.agenda.get(self.nombre)
-
+			print '\nContacto Modificado!!!\n'
+			return self.agenda
+		else:
+			print '\nContacto no encontrado!!!\n'
 		
 	def Cerrar(self):
 		exit()
 
 A=Agenda()
+Agenda_Persona={}
+Agenda_Contacto={}
+Contacto_modificado={}
 
 while True:
 	print '\n###########################################\n'
@@ -56,22 +71,27 @@ while True:
 		A.nombre =raw_input("Introduce el nombre: ")
 		A.telefono=int(raw_input("Introduce su telefono: "))
 		A.email=raw_input("Introduce su email: ")
-		A.Contactos()
+		Agenda_Persona = A.Contactos()
+		Agenda_Contacto = A.Agendar(Agenda_Persona)
 		
 	elif (opcion =='1'):
-		A.Listar()
+		A.Listar(Agenda_Contacto)
 
 	elif (opcion =='2'):
 		nombre=raw_input("Inserte el nombre a buscar: ")
 		A.Buscar(nombre)
 	
 	elif (opcion =='3'):
-		print 'Este metodo edita el telefono y email'
-		nombre=raw_input("Inserte el nombre a buscar: ")
-		A.telefono=int(raw_input("Introduce su telefono: "))
-		A.email=raw_input("Introduce su email: ")
-		A.Editar(nombre)
 		
+		print '\nEste metodo edita el telefono y email\n'
+		nombre=raw_input("Inserte el nombre a buscar: ")
+		print '\nSu contacto es: ', nombre
+		A.Buscar(nombre) 
+		A.telefono=int(raw_input("Introduce telefono nuevo: "))
+		A.email=raw_input("Introduce su email nuevo: ")
+		Contacto_modificado = A.Editar(nombre)
+		Agenda_Contacto = A.Agendar(Contacto_modificado)
+
 	elif (opcion =='4'):
 		A.Cerrar()
 
