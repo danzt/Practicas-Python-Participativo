@@ -15,19 +15,19 @@ class Persona(object):
 	def name(self, name):
 		self.__name = name
 
-	def printName():
+	def printName(self):
 		print "Nombre: {}".format(self.__name)
 
 	def age(self, age):
 		self.__age = age
 
-	def printAge():		
+	def printAge(self):		
 		print "Edad: {}".format(self.__age)
 
 class Alumno(Persona):
 	"""docstring for Alumno"""
 	def __init__(self):
-		super(Persona, self).__init__()
+		#super(Persona, self).__init__()
 		self.__score = None
 
 	def score(self, score):
@@ -35,8 +35,8 @@ class Alumno(Persona):
 
 	def printStudent(self):
 		print "Alumno Ingresado:"
-		printName()
-		printAge()
+		self.printName()
+		self.printAge()
 		print "Nota: {}".format(self.__score)
 
 def main():
